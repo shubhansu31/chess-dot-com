@@ -4,9 +4,9 @@ import pprint
 printer = pprint.PrettyPrinter()
 
 ## name to be edited later
-##user_name = "momo_gogo"
+user_name = "momo_gogo"
 
-user_name = input("Enter User Name: ")
+##user_name = input("Enter User Name: ")
 
 ## 
 response = get_player_stats(user_name)
