@@ -1,14 +1,14 @@
 from chessdotcom import *
+import json
 import pprint
-## for better display of json
 printer = pprint.PrettyPrinter()
 
-## name to be edited later
 user_name = "momo_gogo"
+user_details = get_player_profile(user_name).json['player']
+user_country = user_details['country']
+user_country = user_country[len(user_country) - 2 : len(user_country)]
+user_followers = user_details['followers']
 
-##user_name = input("Enter User Name: ")
-
-## 
-response = get_player_stats(user_name)
-
-printer.pprint(response.json)
+print(user_country)
+print(user_followers)
+printer.pprint(user_details)
